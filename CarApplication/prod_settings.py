@@ -25,8 +25,9 @@ SECRET_KEY = 'qev*%v1i-3l7%#mn2+qko^b#dnu5u+&$-5b7_ozjvpeb8&*=xn'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+ALLOWED_HOSTS = []
 
-ALLOWED_HOSTS = ['https://carapplication2.herokuapp.com']
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -40,9 +41,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    ### production middleware
     'whitenoise.middleware.WhiteNoiseMiddleware',
-
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -76,7 +75,6 @@ WSGI_APPLICATION = 'CarApplication.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-### Local Database
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
@@ -84,8 +82,6 @@ WSGI_APPLICATION = 'CarApplication.wsgi.application'
 #     }
 # }
 
-
-### Production database
 import dj_database_url 
 prod_db  =  dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(prod_db)
