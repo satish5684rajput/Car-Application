@@ -1,0 +1,138 @@
+    /*knockout js validation css*/
+    .validationMessage { color: Red; }
+    .customMessage { color: Orange; }
+
+    html {
+      height: 100%;
+    }
+    body {
+      position: relative;
+      min-height: 100%;
+      padding-bottom:80px;
+    }
+
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+    .row.content {height:auto;} 
+    }.navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #414A4D;
+      color: white;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding:10px; 
+
+    }
+    
+    .footer_text{
+      color: white;
+      line-height: 10px
+    }
+
+    footer a{
+      color: #fff !important;
+    }
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+    
+	/*create btn css*/
+	.create_req_btn{
+		float: right;
+		margin-bottom: 5px;
+		margin-right: 5px;
+		background-color: #828E91;
+    border-color: #828E91;
+    margin-bottom: 10px;	
+	}
+
+  /*feature requests table css*/
+    #feature_requests_table {
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    #feature_requests_table td, #feature_requests_table th {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+    #feature_requests_table tr:nth-child(even){background-color: #f2f2f2;}
+
+    #feature_requests_table tr:hover {background-color: #ddd;}
+
+    #feature_requests_table th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #828E91;
+        color: white;
+      }
+
+    .navbar{
+        background-color: #414A4D;
+        border-color: #414A4D;
+        padding: 6px;
+        margin-bottom: 20px;
+        letter-spacing: 2px;
+        font-size: 30px;
+    }
+
+    .ui-widget-header {
+      border: 1px solid #555;
+      background: #555 url(images/ui-bg_gloss-wave_36_f6a828_500x100.png) 50% 50% repeat-x;
+      
+    }
+
+    .ui-state-highlight{
+      border: 1px solid #555 !important;
+      background: #fff url(images/ui-bg_highlight-soft_75_ffe45c_1x100.png) 50% top repeat-x !important;
+    }
+
+    #feature_requests_table_wrapper{
+      border: 1px solid #ccc;
+      padding: 20px;
+      box-shadow: 2px -2px #ccc;
+      display: none;
+    }
