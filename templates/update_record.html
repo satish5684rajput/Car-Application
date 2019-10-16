@@ -1,0 +1,81 @@
+<!-- Modal -->
+  <div class="modal fade" id="updateSaleRecord" role="dialog">
+    <div class="modal-dialog">    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <form id="update_sale_form" onsubmit='return updateRecord();'>
+          {% csrf_token %}
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Update Record</h4>
+          </div>
+          <div class="modal-body"> 
+              <div class="form-group">
+                <label>Customer ID:</label>
+                <select class="form-control customer_update_form" name="customer_id" id="customer_id" required="True">
+                  {% for customer in customers %}
+                    <option value="{{customer.customer_id}}">{{customer.customer_id}}</option>
+                  {% endfor %}
+                </select>
+                <input type="hidden" class="form-control customer_update_form" id="sales_id" name="sales_id">
+              </div>
+              <div class="form-group">
+                <label for="client">Fuel:</label> 
+                <select class="form-control customer_update_form" name="fuel" id="fuel" required="True">
+                  <option value="C">CNG</option>
+                  <option value="P">Petrol</option>
+                  <option value="D">Diesel</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Vehicle Segment:</label>
+                <input type="text" class="form-control customer_update_form" name="vehicle_segment" id="vehicle_segment" required="True">
+              </div>
+              <div class="form-group">
+                <label>Selling Price:</label>
+                <input type="text" class="form-control customer_update_form" name="selling_price" id="selling_price" required="True">
+              </div>    
+              <div class="form-group">
+                <label for="client">Power Steering:</label> 
+                <select class="form-control customer_update_form" name="power_steering" id="power_steering" required="True">
+                  <option value="1">Yes</option>
+                  <option value="0">No</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="client">Air Bugs:</label> 
+                <select class="form-control customer_update_form" id="air_bugs" name="air_bugs" required="True">
+                  <option value="1">Yes</option>
+                  <option value="0">No</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="client">Sun Roof:</label> 
+                <select class="form-control customer_update_form" id="sun_roof" name="sun_roof" required="True">
+                  <option value="1">Yes</option>
+                  <option value="0">No</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="client">Matt Finish:</label> 
+                <select class="form-control customer_update_form" id="matt_finish" name="matt_finish" required="True">
+                  <option value="1">Yes</option>
+                  <option value="0">No</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="client ">Music Ssystem:</label> 
+                <select class="form-control customer_update_form" id="music_system" name="music_system" required="True">
+                  <option value="1">Yes</option>
+                  <option value="0">No</option>
+                </select>
+              </div>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-default" >Submit</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </form>
+      </div>      
+    </div>
+  </div>
