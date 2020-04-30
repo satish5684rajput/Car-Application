@@ -28,10 +28,10 @@ class Customer(models.Model):
     ]
 
     customer_id = models.IntegerField(primary_key=True, unique=True)
-    customer_gender = models.CharField(choices=GENDER_CHOICES, max_length=1)
-    customer_income_group = models.CharField(choices=INCOME_GROUP, max_length=1)
-    customer_region = models.CharField(choices=REGION_CHOICES, max_length=1)
-    customer_marital_status = models.CharField(choices=MARITAL_STATUS, max_length=1)
+    customer_gender = models.CharField(choices=GENDER_CHOICES, max_length=500)
+    customer_income_group = models.CharField(choices=INCOME_GROUP, max_length=100)
+    customer_region = models.CharField(choices=REGION_CHOICES, max_length=100)
+    customer_marital_status = models.CharField(choices=MARITAL_STATUS, max_length=100)
 
 
 class SalesRecords(models.Model):
@@ -50,14 +50,14 @@ class SalesRecords(models.Model):
     sales_id = models.AutoField(primary_key=True, unique=True)
     date_of_purchase = models.DateTimeField(blank=True, null=True)
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE, blank=True, null=True)
-    fuel = models.CharField(choices=FUEL_CHOICES, max_length=1, blank=True, null=True)
-    vehicle_segment = models.CharField(max_length=1, blank=True, null=True)
+    fuel = models.CharField(choices=FUEL_CHOICES, max_length=100, blank=True, null=True)
+    vehicle_segment = models.CharField(max_length=100, blank=True, null=True)
     selling_price = models.IntegerField(blank=True, null=True)
-    power_steering = models.CharField(choices=BOOLEAN_CHOICES, max_length=1, blank=True, null=True)
-    air_bugs = models.CharField(choices=BOOLEAN_CHOICES, max_length=1, blank=True, null=True)
-    sun_roof = models.CharField(choices=BOOLEAN_CHOICES, max_length=1, blank=True, null=True)
-    Matt_finish = models.CharField(choices=BOOLEAN_CHOICES, max_length=1, blank=True, null=True)
-    music_system = models.CharField(choices=BOOLEAN_CHOICES, max_length=1, blank=True, null=True)
+    power_steering = models.CharField(choices=BOOLEAN_CHOICES, max_length=100, blank=True, null=True)
+    air_bugs = models.CharField(choices=BOOLEAN_CHOICES, max_length=100, blank=True, null=True)
+    sun_roof = models.CharField(choices=BOOLEAN_CHOICES, max_length=100, blank=True, null=True)
+    Matt_finish = models.CharField(choices=BOOLEAN_CHOICES, max_length=100, blank=True, null=True)
+    music_system = models.CharField(choices=BOOLEAN_CHOICES, max_length=100, blank=True, null=True)
 
 # from car_sales.models import Customer, SalesRecords
 # import datetime
